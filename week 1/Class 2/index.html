@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon" href="uet pic.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>University of Engineering and Technology, Lahore </title>
+</head>
+
+<body>
+    <header class="header">
+        <center>
+            <div id="img"><img src="pic.png" alt="uet logo"></div>
+        </center>
+        <div id="uni-name">
+            <center>
+                <h1>University of Engineering and Technology Lahore</h1>
+            </center>
+        </div>
+    </header>
+    <br>
+    <section id="form-section">
+        <center>
+            <br>
+            <h1>Registration form </h1>
+            <br>
+
+            <form action="n.php" method="get"  >
+                <label for="Student-name">Student Name
+                </label><br>
+                <input required type="text" name="name" value="12123" maxlength="5" id="Student-name"><br><br>
+                <label for="Father-name">
+                    Father Name
+                </label><br>
+                <input required type="text" name="" id="Father-name"><br><br>
+                <label for="cnic">
+                    CNIC
+                </label><br>
+                <input required type="text" name="" id="cnic" disabled><br><br>
+                <label for="content-number">
+                    Contact Number
+                </label><br>
+                <input type="date" name="" id="">
+                <input required type="tel" name="" id="content-number"><br><br>
+                <label for="fsc-marks">
+                    FSC Marks
+                </label><br>
+                <input required type="number" name="" id="fsc-marks"><br><br>
+                <label for="et-marks">
+                    Entry Test Marks
+                </label><br>
+                <input required type="number" name="" id="et-marks"><br><br>
+                <label for="student-remarks">
+                    Student Remarks
+                </label><br>
+                <textarea required name="" id="student-remarks" cols="30" rows="10"></textarea>
+                <br>
+                <br>
+                <label for="student-prefrence">
+                    Student preferences
+                </label>
+                <select required name="" id="student-prefrence">
+                    <option value="cs">CS</option>
+                    <option value="ce">CE</option>
+                    <option value="se">SE</option>
+                    <option value="ee">EE</option>
+                </select><br>
+                <label required for="gender">
+                    Gender :
+                </label>
+                <input type="radio" name="mail" id="gender"> Male <input type="radio" name="mail" id="gender"> Female
+                <br><br>
+                <input required id="submit" type="submit" value="submit">
+            </form>
+        </center>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.card-img-top {
+  height: 200px;
+  width: 200px;
+}
+.form-dec {
+  text-align: left;
+  color: #100f3d;
+}
+.card-title {
+  color: #100f3d;
+  font-family: bahnschrift;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-text {
+  font-family: bahnschrift;
+  text-align: justify;
+}
+
+.card-reating {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.card-price {
+  color: #f57224;
+  text-align: center;
+  font-family: bahnschrift;
+  font-weight: bold;
+}
+
+.card-btn {
+  font-family: bahnschrift;
+  color: white;
+  background-color: #f57224;
+}
