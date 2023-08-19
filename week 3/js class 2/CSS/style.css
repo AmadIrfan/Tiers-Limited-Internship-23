@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+label {
+  font-weight: bold;
+  color: white;
+  margin-left: 5px;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+input {
+  border-radius: 10px;
+  border: none;
+  margin-top: 3px;
+  padding: 5px;
+  width: 300px;
+}
+
+#form-submit-btn {
+  width: 300px;
+  height: 40px;
+  color: blueviolet;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+#form-submit-btn:hover {
+  color: white;
+  border: 1px solid white;
+  background-color: blueviolet;
+}
+.name {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+.name > h1 {
+  color: white;
+  text-align: center;
+  font-style: italic;
+  /* margin-top: 20px; */
+}
+.registration-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reg-summary {
+  cursor: pointer;
+  margin-top: 10px;
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  border-radius: 50px;
+  justify-content: center;
+  width: 850px;
+  height: 50px;
+  border: 2px solid blueviolet;
+}
+.inp-forms {
+  margin-top: 5px;
+  width: 850px;
+  display: flex;
+  border-radius: 50px;
+  justify-content: center;
+  background-color: blueviolet;
+}
+
+.name-div {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.name-div>.body {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.course-table,
+.aggregate-table {
+  margin: 10px;
+  border: 2px solid green;
+  border-radius: 10px;
+
+}
+
+td,
+th {
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.result-status {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.result-status>.title {
+  font-size: 27px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.result-status>.result-value {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid darkgray;
+  background-color: darkgray;
+}
