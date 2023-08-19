@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/auth_page.css">
+    <title>Sign Up</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <div class="title">
+                <h1>
+                    Sign Up
+                </h1>
+                <form 9 id="form-signup">
+                    <div>
+                        <label for="email-box">Email</label>
+                        <input type="email" name="Email" required id="email-box" placeholder="Abc@gmail.com">
+                    </div>
+                    <div>
+                        <label for="password-box">Password</label>
+                        <input type="password" name="Password" required id="password-box" placeholder="******">
+                    </div>
+                    <div>
+                        <label for="confirm-password-box">Confirm Password</label>
+                        <input type="password" name="Password" required id="confirm-password-box" placeholder="******">
+                    </div>
+                    <label for="box-box">Date Of Birth</label>
+                    <input type="date" name="dob" id="dob-box" required placeholder="a">
+                    <div class="change-page">
+                        <p class="para">already have an account ?</p>
+                        <a href="login.html">Log in</a>
+                    </div>
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+<script>
+    const onSubmitBtn = document.getElementById("form-signup");
+    console.log(onSubmitBtn);
+    const cPass = document.getElementById("confirm-password-box");
+    cPass.addEventListener("onchange", onchangeVal);
+    function onchangeVal(e) {
+        console.log(e);
+    }
+    onSubmitBtn.addEventListener("submit", onsubmit);
+    
+    function onsubmit(e) {
+        console.log(e);
+        let email = document.getElementById('email-box')
+        let password = document.getElementById('password-box')
+        let dob = document.getElementById('dob-box')
+        console.log(email.value);
+        console.log(password.value);
+        console.log(dob.value);
+        // const cont = document.querySelector(".container");
+        // document.body.style.backgroundColor = "red";
+        // cont.style.background = "red";
+        e.preventDefault();
+        user = {
+            name: email.value,
+            password: password.value,
+            dataOfBirth: dob.value,
+        };
+        let userLogIn=false;
+        userLogIn=true;
+        window.localStorage.setItem("user", JSON.stringify(user));
+        window.localStorage.setItem("userLogin", JSON.stringify(userLogIn));
+        window.location.href = "index.html";
+    }
+</script>
+</html>

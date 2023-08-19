@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/auth_page.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <div class="title">
+                <h1>
+                    Log In
+                </h1>
+                <form 9 id="form-login">
+                    <div>
+                        <label for="email-box">Email</label>
+                        <input type="email" name="Email" required id="email-box" placeholder="Abc@gmail.com">
+                    </div>
+                    <div>
+                        <label for="password-box">Password</label>
+                        <input type="password" name="Password" required id="password-box" placeholder="******">
+                    </div>
+                    <div class="change-page">
+                        <p class="para">Create an account ?</p>
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+<script>
+    const onSubmitBtn = document.getElementById("form-login");
+    onSubmitBtn.addEventListener("submit", onsubmit);
+    function onsubmit(e) {
+        console.log(e);
+        e.preventDefault();
+        let email = document.getElementById('email-box')
+        let password = document.getElementById('password-box')
+        console.log(email.value);
+        console.log(password.value);
+        let user = window.localStorage.getItem("user");
+        if (user != null) {
+
+            let u = JSON.parse(user)
+            if (u.name === email.value && u.password === password.value) {
+                let a = true;
+                window.localStorage.setItem("userLogin", JSON.stringify(a));
+                let b = window.localStorage.getItem("userLogin");
+                console.log(b)
+
+                window.location.href = "index.html";
+            } else {
+                alert('User Name of Password is wrong \n plz try again with valid Email and pass');
+            }
+        } else {
+            setTimeout(() => {
+                alert('User Does not Exist');
+
+            }, 1000)
+
+        }
+    }
+</script>
+</html>
